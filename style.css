@@ -18,6 +18,7 @@ body {
 header {
   background: #001f4d url('header.png') center/cover no-repeat;
   color: #fff;
+  position: relative;
 }
 
 header .container {
