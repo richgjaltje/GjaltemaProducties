@@ -146,6 +146,10 @@ footer {
     display: block;
   }
 
+  header {
+    background: #001f4d url('header.png') center/cover no-repeat;
+  }
+
   nav {
     display: none;
     position: absolute;
