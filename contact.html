@@ -32,20 +32,19 @@
       <h2>Stel ons je vraag</h2>
     </section>
 
-      <section>
-          <form id="contact-form" action="https://formspree.io/f/mjkoryae" method="POST" class="contact-form">
-        <label for="name">Naam</label>
-        <input type="text" id="name" name="name" required>
+  <form action="https://formspree.io/f/mjkoryae" method="POST" class="contact-form">
+    <label for="name">Naam</label>
+    <input type="text" id="name" name="name" required>
+  
+    <label for="email">E-mail</label>
+    <input type="email" id="email" name="email" required>
+  
+    <label for="message">Bericht</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+  
+    <button type="submit" class="btn">Verzenden</button>
+  </form>
 
-        <label for="email">E-mail</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Bericht</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-          <button type="submit" class="btn">Verzenden</button>
-        </form>
-      </section>
     </main>
 
     <footer>
@@ -53,34 +52,6 @@
       <p>Gjaltema Producties &bull; KvK 97624578 &bull; Kievitsweg 17a &bull; E-mail: nog niet bekend &bull; Telefoon: nog niet bekend</p>
     </div>
   </footer>
-  <script>
-    const form = document.getElementById('contact-form');
-    form.addEventListener('submit', async function(e) {
-      e.preventDefault();
-      const data = {
-        name: form.name.value,
-        email: form.email.value,
-        message: form.message.value
-      };
-      try {
-        const resp = await fetch(form.action, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          },
-          body: JSON.stringify(data)
-        });
-        if (resp.ok) {
-          alert('Bedankt! We nemen spoedig contact met je op.');
-          form.reset();
-        } else {
-          alert('Er is iets misgegaan. Probeer het later opnieuw.');
-        }
-      } catch (err) {
-        alert('Er is iets misgegaan. Probeer het later opnieuw.');
-      }
-    });
-  </script>
+
 </body>
 </html>
