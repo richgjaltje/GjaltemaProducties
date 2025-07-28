@@ -10,83 +10,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="logo.png" />
   <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-    }
-    header, footer {
-      background: #003366;
-      color: white;
-      padding: 1.5em 1em;
-    }
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      gap: 1em;
-      flex-wrap: wrap;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      padding: 2em 1em;
-    }
-    .contact-form {
-      background: white;
-      padding: 2em;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-    .contact-form label {
-      display: block;
-      margin-top: 1em;
-      font-weight: 600;
-    }
-    .contact-form input, .contact-form textarea {
-      width: 100%;
-      padding: 0.5em;
-      margin-top: 0.3em;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-family: inherit;
-    }
-    .btn {
-      background-color: #003366;
-      color: white;
-      border: none;
-      padding: 0.7em 1.5em;
-      font-size: 1em;
-      border-radius: 4px;
-      cursor: pointer;
-      margin-top: 1.5em;
-    }
-    .btn:hover {
-      background-color: #005199;
-    }
-    .success-message {
-      background-color: #e0fbe0;
-      color: #145214;
-      padding: 1em;
-      border: 1px solid #a6d8a8;
-      border-radius: 4px;
-      margin-bottom: 2em;
-    }
-  </style>
 </head>
 <body>
 
   <header>
     <div class="container">
-      <img src="logo.png" alt="Gjaltema Producties" class="logo" style="height: 60px;">
+      <img src="logo.png" alt="Gjaltema Producties" class="logo">
+      <button class="menu-toggle" aria-label="Menu">&#9776;</button>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -102,7 +32,7 @@
     <h1>Neem contact op</h1>
 
     <!-- ✅ Succesbericht via URL-parameter -->
-    <div id="success" class="success-message" style="display: none;">
+    <div id="success" class="success-message">
       Bedankt voor je bericht! We nemen zo snel mogelijk contact met je op.
     </div>
 
@@ -135,11 +65,6 @@
   </svg>
 </a>
 
-  <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get('success') === '1') {
-      document.getElementById('success').style.display = 'block';
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
