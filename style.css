@@ -35,6 +35,14 @@ header .container {
   font-size: 2rem;
   cursor: pointer;
   display: none;
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  z-index: 1001;
+}
+
+nav {
+  display: flex;
 }
 
 nav ul {
@@ -85,7 +93,7 @@ section {
   background: #fff;
   padding: 2em;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
 .contact-form label {
@@ -146,6 +154,9 @@ footer {
     transform: translateY(-100%);
     transition: transform 0.3s ease-in-out;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    flex-direction: column;
+    align-items: center;
   }
 
   nav.open {
@@ -154,8 +165,14 @@ footer {
 
   nav ul {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1.5rem;
     padding: 1rem;
+    text-align: center;
+  }
+
+  nav a {
+    color: #001f4d;
+    font-size: 1.5rem;
   }
 }
 
