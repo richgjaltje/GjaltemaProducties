@@ -42,3 +42,17 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+.btn {
+  display: inline-block;
+  background-color: #001f4d;
+  color: #fff;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  margin-top: 0.5em;
+}
+
+.btn:hover {
+  background-color: #003366;
+  text-decoration: none;
+}
