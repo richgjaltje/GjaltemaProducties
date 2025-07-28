@@ -35,6 +35,16 @@ footer {
   padding: 1em;
   font-size: 0.9em;
 }
+
+footer ul.business-info {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1em 0;
+}
+
+footer ul.business-info li {
+  margin: 0.2em 0;
+}
 a {
   color: #001f4d;
   text-decoration: none;
