@@ -6,6 +6,12 @@ body {
   line-height: 1.6;
 }
 
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
 header {
   background-color: #001f4d;
   color: #fff;
@@ -19,6 +25,15 @@ header .container {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
 }
 
 nav ul {
@@ -66,6 +81,16 @@ section {
   gap: 0.75rem;
   max-width: 500px;
   margin: 0 auto;
+  background: #fff;
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.contact-form label {
+  display: block;
+  margin-top: 1em;
+  font-weight: 600;
 }
 
 .contact-form input,
@@ -90,6 +115,15 @@ section {
   background-color: #003366;
 }
 
+.success-message {
+  background-color: #e0fbe0;
+  color: #145214;
+  padding: 1em;
+  border: 1px solid #a6d8a8;
+  border-radius: 4px;
+  margin-bottom: 2em;
+}
+
 footer {
   background-color: #eee;
   text-align: center;
@@ -98,6 +132,18 @@ footer {
 }
 
 @media (max-width: 600px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav.open {
+    display: block;
+  }
+
   nav ul {
     flex-direction: column;
     gap: 0.5rem;
