@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const toggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('nav');
   if (toggle && nav) {
+    let lastScrollY = window.scrollY;
     const closeMenu = () => {
       nav.classList.remove('open');
       toggle.setAttribute('aria-expanded', false);
@@ -33,8 +34,18 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
     document.addEventListener('scroll', () => {
-      if (isMobile() && nav.classList.contains('open')) {
-        closeMenu();
+      if (isMobile()) {
+        if (nav.classList.contains('open')) {
+          closeMenu();
+        }
+        nav.classList.remove('nav-hidden');
+      } else {
+        if (window.scrollY > lastScrollY) {
+          nav.classList.add('nav-hidden');
+        } else {
+          nav.classList.remove('nav-hidden');
+        }
+        lastScrollY = window.scrollY;
       }
     }, { passive: true });
   }
