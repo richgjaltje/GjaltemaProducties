@@ -39,6 +39,8 @@ header .container {
   flex: 1;
   display: flex;
   justify-content: flex-end;
+  position: relative;
+  z-index: 1000;
 }
 
 #main-nav ul {
