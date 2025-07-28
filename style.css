@@ -28,6 +28,15 @@ header .container {
   position: relative;
 }
 
+nav {
+  background-color: #001f4d;
+}
+
+nav .container {
+  display: flex;
+  justify-content: center;
+}
+
 .menu-toggle {
   background: rgba(255, 255, 255, 0.7);
   border: none;
@@ -43,9 +52,6 @@ header .container {
   padding: 0.25rem 0.5rem;
 }
 
-nav {
-  display: flex;
-}
 
 nav ul {
   list-style: none;
@@ -53,6 +59,14 @@ nav ul {
   gap: 1rem;
   margin: 0;
   padding: 0;
+}
+
+nav li {
+  padding: 0 1rem;
+}
+
+nav li + li {
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 nav a {
@@ -80,6 +94,13 @@ main {
   text-align: center;
   padding: 3rem 1rem;
   background-color: #eef1f6;
+}
+
+.service-photo {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
 }
 
 section {
@@ -170,6 +191,7 @@ footer {
   nav.open {
     display: flex;
     transform: translateY(0);
+    animation: slideDown 0.3s ease-out;
   }
 
   nav ul {
@@ -179,9 +201,30 @@ footer {
     text-align: center;
   }
 
+  nav li {
+    padding: 0.75rem 0;
+  }
+
+  nav li + li {
+    border-top: 1px solid #eee;
+    border-left: none;
+  }
+
   nav a {
     color: #001f4d;
     font-size: 1.5rem;
+  }
+
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-0.5rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
