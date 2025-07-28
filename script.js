@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const success = document.getElementById('success');
   if (success) {
+    success.style.display = 'none';
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.get('success') === '1') {
       success.style.display = 'block';

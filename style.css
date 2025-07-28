@@ -125,6 +125,7 @@ section {
 }
 
 .success-message {
+  display: none; /* verborgen tot bevestiging */
   background-color: #e0fbe0;
   color: #145214;
   padding: 1em;
