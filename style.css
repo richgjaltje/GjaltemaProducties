@@ -1,68 +1,105 @@
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: #f9f9f9;
   color: #222;
   margin: 0;
-  padding: 0;
+  line-height: 1.6;
 }
 
 header {
   background-color: #001f4d;
-  color: white;
-  text-align: center;
-  padding: 2em 1em;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 .logo {
-  width: 100px;
+  width: 80px;
   height: auto;
-  margin-bottom: 1em;
 }
 
 main {
-  max-width: 800px;
-  margin: 2em auto;
-  padding: 0 1em;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: #eef1f6;
 }
 
 section {
-  margin-bottom: 2em;
+  margin-bottom: 2rem;
 }
 
-footer {
-  text-align: center;
-  background-color: #eee;
-  padding: 1em;
-  font-size: 0.9em;
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
-footer ul.business-info {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 1em 0;
-}
-
-footer ul.business-info li {
-  margin: 0.2em 0;
-}
-a {
-  color: #001f4d;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
+.contact-form input,
+.contact-form textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font: inherit;
 }
 
 .btn {
   display: inline-block;
   background-color: #001f4d;
   color: #fff;
-  padding: 0.5em 1em;
+  padding: 0.6rem 1.2rem;
+  border: none;
   border-radius: 4px;
-  margin-top: 0.5em;
+  cursor: pointer;
 }
 
 .btn:hover {
   background-color: #003366;
-  text-decoration: none;
+}
+
+footer {
+  background-color: #eee;
+  text-align: center;
+  font-size: 0.875rem;
+  padding: 1rem;
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
