@@ -25,6 +25,7 @@ header .container {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem;
+  position: relative;
 }
 
 .menu-toggle {
@@ -34,6 +35,10 @@ header .container {
   font-size: 2rem;
   cursor: pointer;
   display: none;
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  z-index: 1001;
 }
 
 nav ul {
@@ -137,16 +142,35 @@ footer {
   }
 
   nav {
-    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
   }
 
   nav.open {
-    display: block;
+    transform: translateY(0);
   }
 
   nav ul {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1.5rem;
+    padding: 0;
+    text-align: center;
+  }
+
+  nav a {
+    color: #001f4d;
+    font-size: 1.5rem;
   }
 }
 
