@@ -29,9 +29,9 @@ header .container {
 }
 
 .menu-toggle {
-  background: none;
+  background: rgba(255, 255, 255, 0.7);
   border: none;
-  color: #fff;
+  color: #001f4d;
   font-size: 2rem;
   cursor: pointer;
   display: none;
@@ -39,6 +39,8 @@ header .container {
   top: 0.5rem;
   right: 1rem;
   z-index: 1001;
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
 }
 
 nav {
