@@ -138,14 +138,19 @@ footer {
   }
 
   nav {
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 0;
     left: 0;
     width: 100%;
+    height: 100vh;
     background: #fff;
     transform: translateY(-100%);
     transition: transform 0.3s ease-in-out;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
   }
 
   nav.open {
@@ -154,8 +159,14 @@ footer {
 
   nav ul {
     flex-direction: column;
-    gap: 0.5rem;
-    padding: 1rem;
+    gap: 1.5rem;
+    padding: 0;
+    text-align: center;
+  }
+
+  nav a {
+    color: #001f4d;
+    font-size: 1.5rem;
   }
 }
 
