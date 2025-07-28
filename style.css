@@ -13,7 +13,7 @@ body {
 }
 
 header {
-  background-color: #001f4d;
+  background: #001f4d url('header.png') center/cover no-repeat;
   color: #fff;
   position: sticky;
   top: 0;
