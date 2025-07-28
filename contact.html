@@ -1,20 +1,92 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Neem contact op met Gjaltema Producties" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="logo.png">
-  <link rel="stylesheet" href="style.css">
   <title>Contact - Gjaltema Producties</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+    header, footer {
+      background: #003366;
+      color: white;
+      padding: 1.5em 1em;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 1em;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 2em 1em;
+    }
+    .contact-form {
+      background: white;
+      padding: 2em;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .contact-form label {
+      display: block;
+      margin-top: 1em;
+      font-weight: 600;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 0.5em;
+      margin-top: 0.3em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-family: inherit;
+    }
+    .btn {
+      background-color: #003366;
+      color: white;
+      border: none;
+      padding: 0.7em 1.5em;
+      font-size: 1em;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 1.5em;
+    }
+    .btn:hover {
+      background-color: #005199;
+    }
+    .success-message {
+      background-color: #e0fbe0;
+      color: #145214;
+      padding: 1em;
+      border: 1px solid #a6d8a8;
+      border-radius: 4px;
+      margin-bottom: 2em;
+    }
+  </style>
 </head>
 <body>
+
   <header>
     <div class="container">
-      <img src="logo.png" alt="Gjaltema Producties" class="logo">
+      <img src="logo.png" alt="Gjaltema Producties" class="logo" style="height: 60px;">
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -26,32 +98,42 @@
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <h1>Contact</h1>
-      <h2>Stel ons je vraag</h2>
-    </section>
+  <main class="container">
+    <h1>Neem contact op</h1>
 
-  <form action="https://formspree.io/f/mjkoryae" method="POST" class="contact-form">
-    <label for="name">Naam</label>
-    <input type="text" id="name" name="name" required>
-  
-    <label for="email">E-mail</label>
-    <input type="email" id="email" name="email" required>
-  
-    <label for="message">Bericht</label>
-    <textarea id="message" name="message" rows="5" required></textarea>
-  
-    <button type="submit" class="btn">Verzenden</button>
-  </form>
+    <!-- ✅ Succesbericht via URL-parameter -->
+    <div id="success" class="success-message" style="display: none;">
+      Bedankt voor je bericht! We nemen zo snel mogelijk contact met je op.
+    </div>
 
-    </main>
+    <form action="https://formspree.io/f/mjkoryae" method="POST" class="contact-form">
+      <label for="name">Naam</label>
+      <input type="text" id="name" name="name" required>
 
-    <footer>
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Bericht</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <!-- redirect naar dezelfde pagina met ?success=1 -->
+      <input type="hidden" name="_redirect" value="https://richgjaltje.github.io/GjaltemaProducties/contact.html?success=1">
+
+      <button type="submit" class="btn">Verzenden</button>
+    </form>
+  </main>
+
+  <footer>
     <div class="container">
-      <p>Gjaltema Producties &bull; KvK 97624578 &bull; Kievitsweg 17a &bull; E-mail: nog niet bekend &bull; Telefoon: nog niet bekend</p>
+      <p>Gjaltema Producties • KvK 97624578 • Kievitsweg 17a • E-mail: nog niet bekend • Telefoon: nog niet bekend</p>
     </div>
   </footer>
 
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('success') === '1') {
+      document.getElementById('success').style.display = 'block';
+    }
+  </script>
 </body>
 </html>
