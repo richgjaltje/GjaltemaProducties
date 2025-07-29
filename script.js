@@ -35,9 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     document.addEventListener('scroll', () => {
       if (isMobile()) {
-        if (nav.classList.contains('open')) {
-          closeMenu();
-        }
+        // Laat het menu open wanneer er gescrold wordt op mobiele schermen
         nav.classList.remove('nav-hidden');
       } else {
         if (window.scrollY > lastScrollY) {
