@@ -49,11 +49,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const success = document.getElementById('success');
-  if (success) {
-    success.style.display = 'none';
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get('success') === '1') {
-      success.style.display = 'block';
+    if (success) {
+      success.style.display = 'none';
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('success') === '1') {
+        success.style.display = 'block';
 
       // remove ?success=1 from the URL so the message is not shown on refresh
       const url = new URL(window.location);
@@ -64,6 +64,15 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
         success.style.display = 'none';
       }, 5000);
+      }
     }
-  }
-});
+
+    const messageField = document.getElementById('message');
+    if (messageField) {
+      const urlParams = new URLSearchParams(window.location.search);
+      const pakket = urlParams.get('pakket');
+      if (pakket) {
+        messageField.value = `Ik ben geïnteresseerd in pakket ${pakket}`;
+      }
+    }
+  });
