@@ -1,6 +1,6 @@
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #f9f9f9;
+  background-color: #fcfcfc;
   color: #222;
   margin: 0;
   line-height: 1.6;
@@ -127,6 +127,13 @@ main {
 
 section {
   margin-bottom: 2rem;
+}
+
+main > section:not(.hero) {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 6px;
 }
 
 .contact-form {
