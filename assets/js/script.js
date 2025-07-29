@@ -1,7 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const toggle = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('nav');
-  if (toggle && nav) {
+  const loadPartial = (selector, url) => {
+    const placeholder = document.querySelector(selector);
+    if (!placeholder) return Promise.resolve();
+    return fetch(url)
+      .then(r => r.text())
+      .then(html => { placeholder.outerHTML = html; });
+  };
+
+  Promise.all([
+    loadPartial('header', '/assets/includes/header.html'),
+    loadPartial('footer', '/assets/includes/footer.html')
+  ]).then(init);
+
+  function init() {
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+    if (toggle && nav) {
     let lastScrollY = window.scrollY;
     const closeMenu = () => {
       nav.classList.remove('open');
@@ -82,4 +96,5 @@ document.addEventListener('DOMContentLoaded', () => {
         messageField.value = `Ik ben geïnteresseerd in pakket ${pakket}`;
       }
     }
-  });
+  }
+});
