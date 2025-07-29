@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   Promise.all([
-    loadPartial('header', '/assets/includes/header.html'),
-    loadPartial('footer', '/assets/includes/footer.html')
+    loadPartial('header', 'assets/includes/header.html'),
+    loadPartial('footer', 'assets/includes/footer.html')
   ]).then(init);
 
   function init() {
