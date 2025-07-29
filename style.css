@@ -179,6 +179,14 @@ section {
   margin-bottom: 2em;
 }
 
+.price-with-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
 footer {
   background-color: #eee;
   text-align: center;
