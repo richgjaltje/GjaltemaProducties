@@ -48,6 +48,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   }
 
+  document.querySelectorAll('[data-text-src]').forEach(el => {
+    fetch(el.dataset.textSrc)
+      .then(r => r.text())
+      .then(t => { el.textContent = t; })
+      .catch(e => console.error('Text load error', e));
+  });
+
   const success = document.getElementById('success');
     if (success) {
       success.style.display = 'none';
