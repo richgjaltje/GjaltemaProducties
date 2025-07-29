@@ -134,6 +134,7 @@ main > section:not(.hero) {
   padding: 1rem;
   background-color: #fff;
   border-radius: 6px;
+  overflow: hidden;
 }
 
 .contact-form {
