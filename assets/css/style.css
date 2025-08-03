@@ -304,20 +304,49 @@ footer {
   margin-top: 0.5rem;
 }
 
-.particuliere-evenementen {
-  /* standaard stapelen op mobiel */
+.slideshow-dots {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
-@media (min-width: 768px) {
+.slideshow-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.slideshow-dot.active {
+  background-color: #333;
+}
+
+.particuliere-evenementen {
+  display: flex;
+  align-items: flex-start;
+}
+
+.particuliere-content {
+  flex: 1;
+  margin-right: 2rem;
+}
+
+.particuliere-evenementen .slideshow {
+  margin: 0;
+}
+
+@media (max-width: 767px) {
   .particuliere-evenementen {
-    display: flex;
-    align-items: flex-start;
+    flex-direction: column;
   }
   .particuliere-content {
-    flex: 1;
-    margin-right: 2rem;
+    margin-right: 0;
   }
   .particuliere-evenementen .slideshow {
-    margin: 0;
+    margin-top: 1rem;
   }
 }
