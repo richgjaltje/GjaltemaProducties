@@ -303,3 +303,21 @@ footer {
 .slideshow .slide-caption {
   margin-top: 0.5rem;
 }
+
+.particuliere-evenementen {
+  /* standaard stapelen op mobiel */
+}
+
+@media (min-width: 768px) {
+  .particuliere-evenementen {
+    display: flex;
+    align-items: flex-start;
+  }
+  .particuliere-content {
+    flex: 1;
+    margin-right: 2rem;
+  }
+  .particuliere-evenementen .slideshow {
+    margin: 0;
+  }
+}
