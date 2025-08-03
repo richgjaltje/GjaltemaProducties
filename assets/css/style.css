@@ -325,28 +325,28 @@ footer {
   background-color: #333;
 }
 
-.particuliere-evenementen {
+.particuliere-content {
   display: flex;
   align-items: flex-start;
 }
 
-.particuliere-content {
+.particuliere-text {
   flex: 1;
   margin-right: 2rem;
 }
 
-.particuliere-evenementen .slideshow {
+.particuliere-content .slideshow {
   margin: 0;
 }
 
 @media (max-width: 767px) {
-  .particuliere-evenementen {
+  .particuliere-content {
     flex-direction: column;
   }
-  .particuliere-content {
+  .particuliere-text {
     margin-right: 0;
   }
-  .particuliere-evenementen .slideshow {
+  .particuliere-content .slideshow {
     margin-top: 1rem;
   }
 }
