@@ -325,6 +325,22 @@ footer {
   background-color: #333;
 }
 
+.stroomvoorziening-content {
+  display: flex;
+  align-items: flex-start;
+}
+
+.stroomvoorziening-text {
+  flex: 1;
+  margin-right: 2rem;
+  text-align: left;
+}
+
+.stroomvoorziening-content .slideshow {
+  flex: 1;
+  margin: 0;
+}
+
 .particuliere-content {
   display: flex;
   align-items: flex-start;
@@ -342,6 +358,15 @@ footer {
 }
 
 @media (max-width: 767px) {
+  .stroomvoorziening-content {
+    flex-direction: column;
+  }
+  .stroomvoorziening-text {
+    margin-right: 0;
+  }
+  .stroomvoorziening-content .slideshow {
+    margin-top: 1rem;
+  }
   .particuliere-content {
     flex-direction: column;
   }
