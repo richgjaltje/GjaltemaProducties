@@ -224,10 +224,12 @@ main ul {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .btn:hover {
   background-color: #003366;
+  text-decoration: none;
 }
 
 .success-message {
