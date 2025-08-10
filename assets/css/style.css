@@ -104,7 +104,6 @@ main {
   margin: 1rem 0;
 }
 
-@media (min-width: 601px) {
   .service-photo {
     width: 40%;
     float: right;
@@ -112,7 +111,6 @@ main {
   }
 }
 
-@media (max-width: 600px) {
   .service-photo {
     width: 100%;
     float: none;
@@ -178,13 +176,11 @@ main ul {
   z-index: 2;
 }
 
-@media (min-width: 600px) {
   .services .tile-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (min-width: 900px) {
   .services .tile-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -256,7 +252,6 @@ footer {
 }
 
 /* MOBIEL MENU */
-@media (max-width: 768px) {
   .menu-toggle {
     display: block;
   }
@@ -308,30 +303,6 @@ footer {
   to {
     transform: translateY(0);
     opacity: 1;
-  }
-}
-
-/* WhatsApp knop */
-.whatsapp-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25D366;
-  color: white;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  text-decoration: none;
-  z-index: 1000;
-}
-
-@media (min-width: 601px) {
-  .whatsapp-button {
-    display: none;
   }
 }
 
@@ -405,7 +376,6 @@ footer {
   margin: 0;
 }
 
-@media (max-width: 767px) {
   .stroomvoorziening-content {
     flex-direction: column;
   }
