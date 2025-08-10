@@ -149,22 +149,39 @@ main ul {
 }
 
 .services .tile {
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 6px;
   text-align: center;
   text-decoration: none;
-  color: inherit;
+  color: #fff;
 }
 
 .services .tile img {
+  display: block;
   width: 100%;
   height: auto;
+}
+
+.services .tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
   border-radius: 6px;
+  z-index: 1;
 }
 
 .services .tile h3 {
-  margin: 0.5rem 0 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0.5rem;
   font-size: 1.1rem;
+  z-index: 2;
 }
 
 @media (min-width: 600px) {
