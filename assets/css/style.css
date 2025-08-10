@@ -142,6 +142,43 @@ main ul {
   font-size: 1rem;
 }
 
+.services .tile-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.services .tile {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.services .tile img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.services .tile h3 {
+  margin: 0.5rem 0 0;
+  font-size: 1.1rem;
+}
+
+@media (min-width: 600px) {
+  .services .tile-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .services .tile-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
