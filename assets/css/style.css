@@ -97,12 +97,6 @@ main {
   flex: 1;
 }
 
-.hero {
-  text-align: center;
-  padding: 3rem 1rem;
-  background-color: #eef1f6;
-}
-
 .service-photo {
   display: block;
   max-width: 100%;
@@ -130,7 +124,7 @@ section {
   margin-bottom: 2rem;
 }
 
-main > section:not(.hero) {
+main > section {
   border: 1px solid #ddd;
   padding: 1rem;
   background-color: #fff;
