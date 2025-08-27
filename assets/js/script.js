@@ -88,13 +88,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    const messageField = document.getElementById('message');
-    if (messageField) {
-      const urlParams = new URLSearchParams(window.location.search);
-      const pakket = urlParams.get('pakket');
-      if (pakket) {
-        messageField.value = `Ik ben geïnteresseerd in pakket ${pakket}`;
-      }
-    }
+    // Voorheen werd het berichtveld automatisch ingevuld op basis van
+    // een "pakket"-queryparameter. Dat gedrag is verwijderd zodat het
+    // contactformulier niet langer vooraf ingevulde tekst bevat.
   }
 });
