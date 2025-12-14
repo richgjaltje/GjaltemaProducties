@@ -9,4 +9,4 @@ Dit project bevat de bronbestanden voor de website van Gjaltema Producties.
 - **btw-identificatienummer**: nog niet bekend
 - **Adres**: Kievitsweg 17a
 - **E-mail**: gjaltemaproducties@gmail.com
-- **Telefoon**: nog niet bekend
+- **Telefoon**: nader te bepalen
